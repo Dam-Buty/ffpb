@@ -53,9 +53,11 @@ is transparently given to the `ffmpeg` binary on your system, without any form
 of validation. So if you know how to use the FFmpeg CLI, you know how to use
 ``ffpb`` !
 
-A word of warning though : if you mess with ``ffmpeg``'s verbosity level
-(for example by adding ``-v warning`` to your command), ``ffpb`` will not be able to
-display progress !
+
+Warning : ``ffpb`` works by parsing the text output from ``ffmpeg``, comparing the number
+of processed frames with the total number of frames in the video. If you mess with 
+``ffmpeg``'s verbosity level (for example by adding ``-v warning`` to your command), ``ffpb`` 
+will not be able to display anything.
 
 Using as a library
 ^^^^^^^^^^^^^^^^^^
